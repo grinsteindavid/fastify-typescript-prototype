@@ -1,1 +1,1 @@
-export { default as checkToken } from './timestamp';
+export { default as checkToken } from './check_token';
