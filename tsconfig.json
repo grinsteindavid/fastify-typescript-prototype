@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "esnext",
-        "moduleResolution": "node",
+        "target": "ESNext",
         "sourceMap": true,
+        "pretty": true,
         "outDir": "dist",
-        "allowJs": true,
-        "lib": [
-            "dom",
-            "es6"
-        ],
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "downlevelIteration": true,
+        "declaration": true,
+        "resolveJsonModule": true,
         "baseUrl": "./src",
         "paths": {
             "@/*": [
