@@ -1,5 +1,5 @@
 import { FastifyPluginCallback } from "fastify";
-import * as TicketsController from 'controllers/tickets'
+import { TicketsController } from 'controllers';
 
 const Routes: FastifyPluginCallback = (fastify, opts, done) => {
     fastify.route({

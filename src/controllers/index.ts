@@ -1,0 +1,1 @@
+export * as TicketsController from './tickets'
