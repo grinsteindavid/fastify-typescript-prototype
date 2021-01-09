@@ -9,16 +9,18 @@
     "fastify": "^3.9.2"
   },
   "devDependencies": {
+    "@rollup/plugin-run": "^2.0.2",
     "@types/node": "^14.14.20",
     "http": "^0.0.1-security",
-    "nodemon": "^2.0.7",
     "rollup": "^2.36.1",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-typescript2": "^0.29.0",
     "tslib": "^2.1.0",
     "typescript": "^4.1.3"
   },
   "scripts": {
-    "build": "node_modules/rollup/dist/bin/rollup -c",
-    "dev": "nodemon dist/server.js"
+    "build": "NODE_ENV=production rollup -c",
+    "start": "NODE_ENV=production node dist/server.js",
+    "dev": "NODE_ENV=development rollup -cw"
   }
 }

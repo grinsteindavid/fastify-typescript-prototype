@@ -8,7 +8,7 @@ const Routes: FastifyPluginCallback = (fastify, opts, done) => {
         url: '/',
         preHandler: [checkToken],
         handler: TicketsController.find
-    })
+    });
 
     done();
 };
