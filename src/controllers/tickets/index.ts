@@ -1,9 +1,18 @@
-import { RouteHandlerMethod } from "fastify";
+import { RouteHandlerMethod, FastifyRequest } from "fastify";
 
 export const find: RouteHandlerMethod = (request, reply) => {
-    reply.send({ tickets: [] })
-}
+    reply.send({ tickets: [] });
+};
 
-export const findById: RouteHandlerMethod = (request, reply) => {
-    reply.send({ ticket: {} })
-}
+export const findById: RouteHandlerMethod = (
+    request: FastifyRequest<{
+        Params: {
+            id: number
+        }
+    }>,
+    reply
+) => {
+    const { id } = request.params;
+
+    reply.send({ ticket: { id } });
+};
