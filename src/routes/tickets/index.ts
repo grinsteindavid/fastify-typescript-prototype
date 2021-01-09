@@ -9,6 +9,17 @@ const Routes: FastifyPluginCallback = (fastify, opts, done) => {
         preHandler: [checkToken],
         handler: TicketsController.find
     });
+    fastify.route({
+        method: 'GET',
+        url: '/:id',
+        schema: {
+            params: {
+                id: { type: 'integer' }
+            }
+        },
+        preHandler: [checkToken],
+        handler: TicketsController.findById
+    });
 
     done();
 };
